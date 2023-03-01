@@ -7,11 +7,19 @@
 
 // creo array con lista della spesa
 let myList = ['pane', 'mele', 'detersivo piatti', 'biscotti', 'latte', 'riso', 'pasta', 'carote'];
+console.log(myList);
 
 // inizializzo variabile contatore
 let index = 0;
 
+// creo variabile per elemento HTML
+let listContEl = document.getElementById('list-container');
+
+
 while(index < myList.length) {
-    console.log(myList[index]);
+    console.log((index + 1) + ' ' + myList[index]);
+    let newLine = document.createElement('li');
+    listContEl.append(newLine);
+    newLine.innerHTML = myList[index];
     index++;
 }
